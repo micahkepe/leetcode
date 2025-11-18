@@ -1,4 +1,4 @@
-from collections import defaultdict, deque
+from collections import deque
 from typing import List
 class Solution:
     # This function performs topological sort on a directed graph represented by successors and predecessors_count arrays.

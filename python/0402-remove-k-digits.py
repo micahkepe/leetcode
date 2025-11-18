@@ -5,7 +5,7 @@ class Solution:
             while stack and stack[-1] > i and k > 0:
                 k -= 1
                 stack.pop()
-            if stack or i is not "0":
+            if stack or i != "0":
                 stack.append(i)
         if k:
             stack = stack[:-k]
