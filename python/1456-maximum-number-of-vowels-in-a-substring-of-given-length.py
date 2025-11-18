@@ -12,6 +12,3 @@ class Solution:
                 l += 1
             res = max(res, total)
         return res
-
-            
-            

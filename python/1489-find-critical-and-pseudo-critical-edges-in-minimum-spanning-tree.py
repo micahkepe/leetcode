@@ -21,11 +21,14 @@ class UnionFind:
             self.rank[p2] += self.rank[p1]
         return True
 
+
 class Solution:
-    def findCriticalAndPseudoCriticalEdges(self, n: int, edges: List[List[int]]) -> List[List[int]]:
+    def findCriticalAndPseudoCriticalEdges(
+        self, n: int, edges: List[List[int]]
+    ) -> List[List[int]]:
         # Time: O(E^2) - UF operations are assumed to be approx O(1)
         for i, e in enumerate(edges):
-            e.append(i) # [v1, v2, weight, original_index]
+            e.append(i)  # [v1, v2, weight, original_index]
 
         edges.sort(key=lambda e: e[2])
 
@@ -46,7 +49,7 @@ class Solution:
             if max(uf.rank) != n or weight > mst_weight:
                 critical.append(i)
                 continue
-            
+
             # Try with curr edge
             uf = UnionFind(n)
             uf.union(n1, n2)

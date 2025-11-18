@@ -4,8 +4,8 @@ class ListNode:
         self.prev = None
         self.next = None
 
-class MyLinkedList:
 
+class MyLinkedList:
     def __init__(self):
         self.left = ListNode(0)
         self.right = ListNode(0)
@@ -17,7 +17,7 @@ class MyLinkedList:
         while cur and index > 0:
             cur = cur.next
             index -= 1
-        
+
         if cur and cur != self.right and index == 0:
             return cur.val
         return -1
@@ -39,20 +39,19 @@ class MyLinkedList:
         while next and index > 0:
             next = next.next
             index -= 1
-        
+
         if next and index == 0:
             node, prev = ListNode(val), next.prev
             node.next, node.prev = next, prev
             next.prev = node
             prev.next = node
 
-
     def deleteAtIndex(self, index: int) -> None:
         node = self.left.next
         while node and index > 0:
             node = node.next
             index -= 1
-        
+
         if node and node != self.right and index == 0:
             node.prev.next = node.next
             node.next.prev = node.prev

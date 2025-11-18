@@ -14,17 +14,16 @@ class Solution:
         # If both left and right children are None, return as there are no more branches to explore
         if t.left is None and t.right is None:
             return
-        res.append('(')
+        res.append("(")
 
         # Recursively call the DFS function for the left child
         self.dfs(t.left, res)
-        res.append(')')
+        res.append(")")
 
         # If the right child exists, process it
         if t.right is not None:
-            res.append('(')
+            res.append("(")
 
             # Recursively call the DFS function for the right child
             self.dfs(t.right, res)
-            res.append(')')
-            
+            res.append(")")

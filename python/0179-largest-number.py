@@ -9,6 +9,6 @@ class Solution:
             else:
                 return 1
 
-        nums = sorted(nums, key = cmp_to_key(compare))
+        nums = sorted(nums, key=cmp_to_key(compare))
 
         return str(int("".join(nums)))

@@ -5,12 +5,10 @@ class Node:
 
 
 class MyCircularQueue:
-
     def __init__(self, k: int):
         self.head = self.tail = None
         self.capacity = k
         self.size = 0
-
 
     def enQueue(self, value: int) -> bool:
         if self.isFull():
@@ -26,7 +24,6 @@ class MyCircularQueue:
 
         return True
 
-
     def deQueue(self) -> bool:
         if self.isEmpty():
             return False
@@ -36,19 +33,14 @@ class MyCircularQueue:
 
         return True
 
-
     def Front(self) -> int:
         return -1 if self.isEmpty() else self.head.val
-
 
     def Rear(self) -> int:
         return -1 if self.isEmpty() else self.tail.val
 
-
     def isEmpty(self) -> bool:
         return self.size == 0
 
-
     def isFull(self) -> bool:
         return self.capacity == self.size
-

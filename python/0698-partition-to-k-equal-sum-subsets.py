@@ -9,9 +9,9 @@ class Solution(object):
         if sum(nums) % k != 0:
             return False
 
-        nums.sort(reverse = True)
+        nums.sort(reverse=True)
         target = sum(nums) / k
-        visited= set()
+        visited = set()
 
         def backtrack(idx, count, currSum):
             if count == k:
@@ -21,7 +21,6 @@ class Solution(object):
                 return backtrack(0, count + 1, 0)
 
             for i in range(idx, len(nums)):
-                
                 # skip duplicates if last same number was skipped
                 if i > 0 and (i - 1) not in visited and nums[i] == nums[i - 1]:
                     continue
@@ -33,10 +32,9 @@ class Solution(object):
 
                 if backtrack(i + 1, count, currSum + nums[i]):
                     return True
-                
+
                 visited.remove(i)
 
             return False
-
 
         return backtrack(0, 0, 0)

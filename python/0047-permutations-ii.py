@@ -2,7 +2,6 @@ import collections
 
 
 class Solution:
-
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
         result = []
         counter = collections.Counter(nums)

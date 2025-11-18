@@ -19,7 +19,7 @@ class Solution:
             return rootNode
 
         inorderIndexMap = {}
-        for (i, val) in enumerate(inorder):
+        for i, val in enumerate(inorder):
             inorderIndexMap[val] = i
 
         return buildTreeHelper(0, len(postorder) - 1)

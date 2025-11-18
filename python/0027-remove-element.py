@@ -7,10 +7,11 @@ class Solution:
                 k += 1
         return k
 
+
 # Optimized solution with the same time and space complexity
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        # Avoid unessary copy operations in a previous solution, when k == i and nums[i] != val 
+        # Avoid unessary copy operations in a previous solution, when k == i and nums[i] != val
         # by swapping nums[i] and the last element of the array (nums[n])
         n = len(nums)
         i = 0
@@ -21,5 +22,5 @@ class Solution:
                 n -= 1  # decrement the length of the array by discarding the last element
             else:
                 i += 1
-        
+
         return n

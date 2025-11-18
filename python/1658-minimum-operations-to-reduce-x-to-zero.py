@@ -14,7 +14,7 @@ class Solution:
         right = 0
         curr_sum = 0
         while right < n:
-            curr_sum += nums[right] 
+            curr_sum += nums[right]
             right += 1
 
             while left < n and curr_sum > target_sum:
@@ -22,7 +22,11 @@ class Solution:
                 left += 1
 
             if curr_sum == target_sum:
-                ops = n - (right - left) # determine no. of operations used in reduction of nums to candidate subarray 
-                min_ops = ops if min_ops == -1 else min(min_ops, ops) # determine if candidate is best candidate thus far
+                ops = (
+                    n - (right - left)
+                )  # determine no. of operations used in reduction of nums to candidate subarray
+                min_ops = (
+                    ops if min_ops == -1 else min(min_ops, ops)
+                )  # determine if candidate is best candidate thus far
 
-        return min_ops # return best candidate
+        return min_ops  # return best candidate

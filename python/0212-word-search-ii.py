@@ -34,7 +34,7 @@ class Solution:
 
         def dfs(r, c, node, word):
             if (
-                r not in range(ROWS) 
+                r not in range(ROWS)
                 or c not in range(COLS)
                 or board[r][c] not in node.children
                 or node.children[board[r][c]].refs < 1

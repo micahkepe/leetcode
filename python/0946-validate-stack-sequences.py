@@ -9,5 +9,3 @@ class Solution(object):
                 i += 1
 
         return not stack
-
-

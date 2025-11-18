@@ -1,5 +1,4 @@
 class MyQueue:
-    
     def __init__(self):
         self.append_stack = []
         self.inverted_stack = []

@@ -1,12 +1,11 @@
-
 class Solution:
-    def PrimeSum(self,mat):
+    def PrimeSum(self, mat):
         cnt = 0
         for i in range(len(mat)):
             cnt += mat[i][i]
         return cnt
 
-    def CrossSum(self,mat):
+    def CrossSum(self, mat):
         cnt = 0
         for i in range(len(mat)):
             cnt += mat[i][len(mat) - i - 1]

@@ -8,7 +8,7 @@ class Solution(object):
         :rtype: int
         """
 
-        upperLimit = max(nums) + 1 
+        upperLimit = max(nums) + 1
         store = [0] * upperLimit
 
         for num in nums:

@@ -8,7 +8,7 @@ class Solution:
             alt1 += "0" if i % 2 == 0 else "1"
             alt2 += "1" if i % 2 == 0 else "0"
 
-        res = float('inf')
+        res = float("inf")
         diff1, diff2 = 0, 0
         l = 0
         for r in range(len(s)):

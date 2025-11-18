@@ -4,10 +4,11 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class MyHashMap:
     def __init__(self):
         self.map = [ListNode() for i in range(1000)]
-        
+
     def hashcode(self, key):
         return key % len(self.map)
 
@@ -19,7 +20,7 @@ class MyHashMap:
                 return
             cur = cur.next
         cur.next = ListNode(key, value)
-         
+
     def get(self, key: int) -> int:
         cur = self.map[self.hashcode(key)].next
         while cur and cur.key != key:

@@ -12,7 +12,7 @@ class Solution:
                     return False
                 elif not even and (node.val % 2 == 1 or node.val >= prev):
                     return False
-                
+
                 if node.left:
                     q.append(node.left)
                 if node.right:

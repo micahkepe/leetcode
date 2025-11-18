@@ -10,7 +10,7 @@ class Solution:
                 low += 1
                 mid += 1
             elif nums[mid] == 1:
-                mid +=1
+                mid += 1
             else:
                 nums[mid], nums[high] = nums[high], nums[mid]
                 high -= 1

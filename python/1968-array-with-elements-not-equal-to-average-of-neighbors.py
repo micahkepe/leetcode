@@ -13,7 +13,7 @@ class Solution:
         nums.sort()
 
         i, j, n = 0, 0, len(nums)
-        ans = [0]*n
+        ans = [0] * n
 
         while i < n and j < n:
             ans[i] = nums[j]
@@ -27,4 +27,3 @@ class Solution:
             j = j + 1
 
         return ans
-    

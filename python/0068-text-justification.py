@@ -20,7 +20,7 @@ class Solution:
 
                 res.append("".join(line))
                 line, length = [], 0  # Reset line and length
-            
+
             line.append(words[i])
             length += len(words[i])
             i += 1

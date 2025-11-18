@@ -12,7 +12,7 @@ class Solution:
                 one += 1
             if one - zero not in diff_index:
                 diff_index[one - zero] = i
-            
+
             if one == zero:
                 res = one + zero
             else:

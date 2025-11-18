@@ -8,8 +8,9 @@ class Solution:
 
         return self.merge_two_sorted(left, right)
 
-
-    def merge_two_sorted(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+    def merge_two_sorted(
+        self, list1: Optional[ListNode], list2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         if not list1:
             return list2
 
@@ -33,7 +34,6 @@ class Solution:
             prev.next = list2
 
         return sentinel.next
-
 
     def get_mid(self, head: Optional[ListNode]) -> Optional[ListNode]:
         mid_prev = None

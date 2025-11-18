@@ -1,5 +1,6 @@
 import collections
 
+
 class Solution:
     def totalFruit(self, fruits: List[int]) -> int:
         count = collections.defaultdict(int)
@@ -20,10 +21,3 @@ class Solution:
             res = max(res, total)
 
         return res
-
-
-        
-            
-
-            
-            

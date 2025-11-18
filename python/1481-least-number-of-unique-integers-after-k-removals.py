@@ -1,6 +1,6 @@
 # Use a heap
 class Solution:
-    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int: 
+    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         freq = Counter(arr)
         heap = list(freq.values())
         heapq.heapify(heap)
@@ -13,9 +13,10 @@ class Solution:
                 res -= 1
         return res
 
+
 # Use buckets
 class Solution:
-    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int: 
+    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         freq = Counter(arr)
         freqList = [0] * (len(arr) + 1)
 

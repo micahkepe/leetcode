@@ -2,7 +2,6 @@ from random import choice
 
 
 class RandomizedSet:
-
     def __init__(self):
         self.dict = {}
         self.list = []

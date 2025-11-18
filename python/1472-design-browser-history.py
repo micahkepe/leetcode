@@ -5,6 +5,7 @@ class ListNode:
         self.prev = prev
         self.next = next
 
+
 class BrowserHistory:
     def __init__(self, homepage: str):
         self.cur = ListNode(homepage)
@@ -30,7 +31,7 @@ class BrowserHistory:
 
 
 # Array Implementation
-class BrowserHistory:    
+class BrowserHistory:
     def __init__(self, homepage: str):
         self.i = 0
         self.len = 1

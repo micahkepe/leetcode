@@ -1,3 +1,6 @@
+from typing import List
+
+
 # Problem is free on Lintcode
 class Solution:
     """
@@ -29,17 +32,17 @@ class Solution:
             return True
 
         return dfs(0, -1) and n == len(visit)
-    
-    
-    
-    # alternative solution via DSU O(ElogV) time complexity and 
-    # save some space as we don't recreate graph\tree into adjacency list prior dfs and loop over the edge list directly
-    class Solution:
+
+
+# alternative solution via DSU O(ElogV) time complexity and
+# save some space as we don't recreate graph\tree into adjacency list prior dfs and loop over the edge list directly
+class SolutionDSU:
     """
     @param n: An integer
     @param edges: a list of undirected edges
     @return: true if it's a valid tree, or false
     """
+
     def __find(self, n: int) -> int:
         while n != self.parents.get(n, n):
             n = self.parents.get(n, n)
@@ -69,5 +72,3 @@ class Solution:
             self.__connect(e1, e2)
 
         return self.components == 1  # forest contains one tree
-
-

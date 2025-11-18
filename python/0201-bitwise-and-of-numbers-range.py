@@ -7,12 +7,13 @@ class Solution:
             bit = (left >> i) & 1
             if not bit:
                 continue
-            
+
             remain = left % (1 << (i + 1))
             diff = (1 << (i + 1)) - remain
             if right - left < diff:
                 res = res | (1 << i)
         return res
+
 
 # find the longest matching prefix of set bits between left and right
 class Solution:

@@ -6,5 +6,5 @@ class Solution:
                 return 0
             if i < 0:
                 flag = not flag
-        
+
         return 1 if flag else -1

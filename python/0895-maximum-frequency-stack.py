@@ -18,4 +18,3 @@ class FreqStack:
         if not self.stacks[self.maxCnt]:
             self.maxCnt -= 1
         return res
-

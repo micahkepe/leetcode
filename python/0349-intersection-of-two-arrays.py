@@ -7,4 +7,4 @@ class Solution:
             if n in seen:
                 res.append(n)
                 seen.remove(n)
-        return res        
+        return res

@@ -5,8 +5,9 @@ class Solution:
         for c in s:
             if c == "1":
                 count += 1
-        
+
         return (count - 1) * "1" + (len(s) - count) * "0" + "1"
+
 
 # Traverse and swap indices
 class Solution:

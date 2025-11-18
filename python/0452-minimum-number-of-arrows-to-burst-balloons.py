@@ -11,5 +11,5 @@ class Solution:
                 prev = [curr[0], min(curr[1], prev[1])]
             else:
                 prev = curr
-            
+
         return res

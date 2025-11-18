@@ -9,14 +9,14 @@ class Solution:
                 return
             seen.add((x, y))
             grid[x][y] = 1
-            dfs(x+1, y)
-            dfs(x, y+1)
-            dfs(x-1, y)
-            dfs(x, y-1)
-        
+            dfs(x + 1, y)
+            dfs(x, y + 1)
+            dfs(x - 1, y)
+            dfs(x, y - 1)
+
         for i in range(r):
             for j in range(c):
-                if i == 0 or j == 0 or i == r-1 or j == c-1:
+                if i == 0 or j == 0 or i == r - 1 or j == c - 1:
                     dfs(i, j)
         ans = 0
         for i in range(r):
@@ -24,4 +24,4 @@ class Solution:
                 if grid[i][j] == 0:
                     dfs(i, j)
                     ans += 1
-        return ans       
+        return ans

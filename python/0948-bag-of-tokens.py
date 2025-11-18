@@ -4,7 +4,7 @@ class Solution:
         tokens.sort()
 
         l, r = 0, len(tokens) - 1
-        while (l <= r):
+        while l <= r:
             if power >= tokens[l]:
                 power -= tokens[l]
                 l += 1

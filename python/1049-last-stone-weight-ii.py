@@ -10,8 +10,7 @@ class Solution:
             if (i, total) in dp:
                 return dp[(i, total)]
 
-            dp[(i, total)] = min(dfs(i + 1, total),
-                                 dfs(i + 1, total + stones[i]))
+            dp[(i, total)] = min(dfs(i + 1, total), dfs(i + 1, total + stones[i]))
             return dp[(i, total)]
 
         dp = {}

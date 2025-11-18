@@ -4,10 +4,14 @@ class Solution:
         result, heap = [], []
         cur_task_index = 0
         cur_time = tasks[0][0]
-        
+
         while len(result) < len(tasks):
-            while (cur_task_index < len(tasks)) and (tasks[cur_task_index][0] <= cur_time):
-                heapq.heappush(heap, (tasks[cur_task_index][1], tasks[cur_task_index][2]))
+            while (cur_task_index < len(tasks)) and (
+                tasks[cur_task_index][0] <= cur_time
+            ):
+                heapq.heappush(
+                    heap, (tasks[cur_task_index][1], tasks[cur_task_index][2])
+                )
                 cur_task_index += 1
             if heap:
                 time_difference, original_index = heapq.heappop(heap)
@@ -15,5 +19,5 @@ class Solution:
                 result.append(original_index)
             elif cur_task_index < len(tasks):
                 cur_time = tasks[cur_task_index][0]
-                
+
         return result

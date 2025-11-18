@@ -1,5 +1,7 @@
 class Solution:
-    def findAllPeople(self, n: int, meetings: List[List[int]], firstPerson: int) -> List[int]:
+    def findAllPeople(
+        self, n: int, meetings: List[List[int]], firstPerson: int
+    ) -> List[int]:
         secrets = set([0, firstPerson])
         time_map = {}
 
@@ -8,7 +10,7 @@ class Solution:
                 time_map[t] = defaultdict(list)
             time_map[t][src].append(dst)
             time_map[t][dst].append(src)
-        
+
         def dfs(src, adj):
             if src in visit:
                 return

@@ -1,7 +1,7 @@
 import heapq
 
-class SeatManager:
 
+class SeatManager:
     def __init__(self, n: int):
         self.seats = [i for i in range(1, n + 1)]
 

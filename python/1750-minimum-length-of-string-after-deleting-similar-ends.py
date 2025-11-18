@@ -8,4 +8,4 @@ class Solution:
                 l += 1
             while l <= r and s[r] == tmp:
                 r -= 1
-        return (r - l + 1)
+        return r - l + 1

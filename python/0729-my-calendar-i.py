@@ -1,12 +1,11 @@
 # Segment Tree solution
 
-class MyCalendar:
 
+class MyCalendar:
     def __init__(self):
         self.calendar = CalendarNode(-1, -1)
 
     def book(self, start: int, end: int) -> bool:
-
         def bookHelper(cur, targetStart, targetEnd):
             if targetStart > cur.end:
                 # go to the right
@@ -23,10 +22,10 @@ class MyCalendar:
                     return True
                 return bookHelper(cur.left, targetStart, targetEnd)
             return False
-        
-        return bookHelper(self.calendar, start, end-1) # "end-1" because "end" bound is exclusive (see example 1) 
-    
 
+        return bookHelper(
+            self.calendar, start, end - 1
+        )  # "end-1" because "end" bound is exclusive (see example 1)
 
 
 class CalendarNode:

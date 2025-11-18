@@ -29,6 +29,7 @@ class Solution:
     def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
         max_height = -1
         res = -1
+
         def dfs(root, depth):
             nonlocal max_height, res
             if not root:
@@ -38,7 +39,7 @@ class Solution:
                 res = root.val
             dfs(root.left, depth + 1)
             dfs(root.right, depth + 1)
-        
+
         dfs(root, 0)
         return res
 

@@ -6,12 +6,12 @@
 #         self.right = right
 class Solution:
     def allPossibleFBT(self, n: int) -> List[Optional[TreeNode]]:
-        dp = { 0 : [], 1 : [ TreeNode() ] }
+        dp = {0: [], 1: [TreeNode()]}
 
         def backtrack(n):
             if n in dp:
                 return dp[n]
-            
+
             res = []
             for l in range(n):
                 r = n - 1 - l
@@ -22,5 +22,5 @@ class Solution:
                         res.append(TreeNode(0, t1, t2))
             dp[n] = res
             return res
-        
+
         return backtrack(n)

@@ -15,5 +15,5 @@ class Solution:
                     return i
                 ladders -= 1
                 bricks += -heapq.heappop(heap)
-            
+
         return len(heights) - 1

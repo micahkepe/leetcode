@@ -3,6 +3,7 @@ class Solution:
         n = len(graph)
         safe = {}
         res = []
+
         def dfs(i):
             if i in safe:
                 return safe[i]
@@ -12,6 +13,8 @@ class Solution:
                     return safe[i]
             safe[i] = True
             return safe[i]
+
         for i in range(len(graph)):
-            if dfs(i): res.append(i)
+            if dfs(i):
+                res.append(i)
         return res

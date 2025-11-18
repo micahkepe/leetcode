@@ -1,6 +1,6 @@
 class Solution:
     def minReorder(self, n: int, connections: List[List[int]]) -> int:
-        edges = {(a,b) for a, b in connections}
+        edges = {(a, b) for a, b in connections}
         neighbors = defaultdict(list)
         visit = set()
         changes = 0
@@ -8,7 +8,7 @@ class Solution:
         for a, b in connections:
             neighbors[a].append(b)
             neighbors[b].append(a)
-        
+
         def dfs(city):
             nonlocal changes
 
@@ -20,6 +20,7 @@ class Solution:
                     changes += 1
                 visit.add(neighbor)
                 dfs(neighbor)
+
         visit.add(0)
         dfs(0)
         return changes

@@ -10,6 +10,5 @@ class Solution:
             countT[t[i]] = 1 + countT.get(t[i], 0)
         return countS == countT
 
-    
     # easier solution
-    #return True if sorted(s) == sorted(t) else False
+    # return True if sorted(s) == sorted(t) else False

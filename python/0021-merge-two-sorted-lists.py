@@ -21,10 +21,13 @@ class Solution:
         node.next = list1 or list2
 
         return dummy.next
-    
+
+
 # Recursive
 class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+    def mergeTwoLists(
+        self, list1: Optional[ListNode], list2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         if not list1:
             return list2
         if not list2:

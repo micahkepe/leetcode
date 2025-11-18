@@ -13,6 +13,5 @@ class Solution:
             res += freq[i]
             if len(res) == k:
                 return res
-                
 
         # O(n)

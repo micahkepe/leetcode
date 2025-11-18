@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def shortestSubarray(self, nums: List[int], k: int) -> int:
         size = len(nums)
@@ -13,7 +15,7 @@ class Solution:
                 monoq.pop()
             while monoq and val - pre[monoq[0]] >= k:
                 ans = min(ans, i - monoq.popleft())
-            
+
             monoq.append(i)
-        
-        return ans if ans < size + 1 else -1   
+
+        return ans if ans < size + 1 else -1

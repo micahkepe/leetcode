@@ -1,5 +1,6 @@
 # Time: O(n) Space: O(1)
 
+
 class Solution(object):
     def gridGame(self, grid):
         result = float("inf")

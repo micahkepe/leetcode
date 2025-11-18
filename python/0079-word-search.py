@@ -28,7 +28,7 @@ class Solution:
         count = sum(map(Counter, board), Counter())
         if count[word[0]] > count[word[-1]]:
             word = word[::-1]
-            
+
         for r in range(ROWS):
             for c in range(COLS):
                 if dfs(r, c, 0):

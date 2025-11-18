@@ -9,5 +9,4 @@ class Solution:
                 stack.append(i)
         if k:
             stack = stack[:-k]
-        return ''.join(stack) or '0'
-        
+        return "".join(stack) or "0"

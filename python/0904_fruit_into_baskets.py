@@ -13,6 +13,6 @@ class Solution:
                 if tr[fruits[l]] == 0:
                     del tr[fruits[l]]
                 l += 1
-            res = max(res, r-l+1)
+            res = max(res, r - l + 1)
             r += 1
         return res

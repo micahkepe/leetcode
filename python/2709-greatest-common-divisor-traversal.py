@@ -19,7 +19,8 @@ class UnionFind:
         else:
             self.par[py] = px
             self.size[px] += self.size[py]
-        self.count -=1
+        self.count -= 1
+
 
 class Solution:
     def canTraverseAllPairs(self, nums: List[int]) -> bool:
